@@ -15,6 +15,8 @@ sysctl --system
 vi /etc/iptables/rules.v4
 iptables-restore < /etc/iptables/rules.v4
 
+( umask 077 ; wg genkey > /etc/wireguard/wg150.key ; )
+
 # add GPG key
 curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add -
 

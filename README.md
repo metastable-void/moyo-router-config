@@ -26,6 +26,11 @@ iptables-restore < /etc/iptables/rules.v4
 
 ( umask 077 ; wg genkey > /etc/wireguard/wg150.key ; )
 
+wg pubkey < /etc/wireguard/wg150.key > /etc/wireguard/wg150.pub
+vi /etc/wireguard/wg150.conf
+systemctl enable wg-quick@wg150
+systemctl restart wg-quick@wg150
+
 # add GPG key
 curl -s https://deb.frrouting.org/frr/keys.asc | apt-key add -
 

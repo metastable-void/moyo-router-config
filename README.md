@@ -29,5 +29,15 @@ sudo apt update && sudo apt install frr frr-pythontools
 vi /etc/frr/daemons
 systemctl restart frr
 
+lxd.init
+# create network = no
+# default network = br-menhera
+
+lxc init ubuntu:22.04 moyo-server
+lxc config show moyo-server
+# copy MAC address to /etc/dhcp/dhcpd.conf
+lxc config set moyo-server security.privileged true
+lxc config set moyo-server security.nesting true
+lxc start moyo-server
 vtysh
 ```

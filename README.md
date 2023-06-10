@@ -50,4 +50,7 @@ lxc config show moyo-server
 lxc config set moyo-server security.privileged true
 lxc config set moyo-server security.nesting true
 lxc start moyo-server
+lxc shell moyo-server
+# vi /home/ubuntu/.ssh/authorized_keys
+# passwd ubuntu
 ```

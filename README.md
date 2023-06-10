@@ -23,4 +23,9 @@ echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -
 
 # update and install FRR
 sudo apt update && sudo apt install frr frr-pythontools
+
+vi /etc/frr/daemons
+systemctl restart frr
+
+vtysh
 ```

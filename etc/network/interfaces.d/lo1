@@ -3,5 +3,3 @@ iface lo1 inet static
 	pre-up /sbin/ip link add lo1 type dummy
 	post-down /sbin/ip link del lo1 type dummy
 	address 10.194.0.1/32
-	post-up /srv/enable-policy-base-routing.sh
-

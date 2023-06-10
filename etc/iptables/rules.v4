@@ -1,0 +1,12 @@
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A FORWARD -m conntrack --ctstate INVALID -j DROP
+-A FORWARD -m state --state INVALID -j DROP
+-A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -p icmp -j ACCEPT
+-A FORWARD -i br-moyo -j ACCEPT
+-A FORWARD -i eth0 -j ACCEPT
+-A FORWARD -o br-moyo -j DROP
+COMMIT

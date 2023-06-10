@@ -2,11 +2,16 @@
 
 ```
 apt update
-apt install ifupdown isc-dhcp-server wireguard
+apt install ifupdown isc-dhcp-server wireguard iptables-persistent
 systemctl unmask networking
 systemctl enable networking
 
+vi /etc/sysctl.d/99-proxy-arp.conf
+vi /etc/sysctl.d/99-router.conf
 sysctl --system
+
+vi /etc/iptables/rules.v4
+iptables-restore < /etc/iptables/rules.v4
 
 # add GPG key
 curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add -

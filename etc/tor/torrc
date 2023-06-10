@@ -1,0 +1,6 @@
+# Only for emergency remote access
+SocksPort 0
+HiddenServiceDir /var/lib/tor/onion_ssh/
+HiddenServiceNonAnonymousMode 1
+HiddenServiceSingleHopMode 1
+HiddenServicePort 22 127.0.0.1:22

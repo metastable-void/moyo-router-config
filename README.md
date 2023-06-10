@@ -3,7 +3,7 @@
 ```bash
 sudo -i
 apt update
-apt install ifupdown isc-dhcp-server wireguard iptables-persistent hostapd
+apt install ifupdown isc-dhcp-server wireguard iptables-persistent hostapd tor
 systemctl unmask networking
 systemctl enable networking
 
@@ -23,6 +23,9 @@ sysctl --system
 
 vi /etc/iptables/rules.v4
 iptables-restore < /etc/iptables/rules.v4
+
+vi /etc/tor/torrc
+systemctl restart tor
 
 ( umask 077 ; wg genkey > /etc/wireguard/wg150.key ; )
 

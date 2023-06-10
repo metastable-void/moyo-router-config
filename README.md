@@ -2,7 +2,7 @@
 
 ```
 apt update
-apt install ifupdown isc-dhcp-server wireguard iptables-persistent
+apt install ifupdown isc-dhcp-server wireguard iptables-persistent hostapd
 systemctl unmask networking
 systemctl enable networking
 

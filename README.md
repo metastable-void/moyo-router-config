@@ -1,6 +1,6 @@
 # moyo-router-config
 
-```
+```bash
 apt update
 apt install ifupdown isc-dhcp-server wireguard iptables-persistent hostapd
 systemctl unmask networking

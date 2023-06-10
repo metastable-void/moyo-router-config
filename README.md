@@ -29,7 +29,7 @@ sudo apt update && sudo apt install frr frr-pythontools
 vi /etc/frr/daemons
 systemctl restart frr
 
-lxd.init
+lxd init
 # create network = no
 # default network = br-menhera
 

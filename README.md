@@ -14,7 +14,6 @@ adduser menhera
 adduser menhera sudo
 adduser menhera lxd
 vi /home/menhera/.ssh/authorized_keys
-passwd menhera
 
 hostnamectl set-hostname ro01 # or moyo-router
 

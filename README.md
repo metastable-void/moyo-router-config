@@ -6,6 +6,8 @@ apt install ifupdown isc-dhcp-server wireguard iptables-persistent hostapd
 systemctl unmask networking
 systemctl enable networking
 
+hostnamectl set-hostname ro01 # or moyo-router
+
 vi /etc/sysctl.d/99-proxy-arp.conf
 vi /etc/sysctl.d/99-router.conf
 sysctl --system

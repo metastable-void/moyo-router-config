@@ -29,6 +29,8 @@ sudo apt update && sudo apt install frr frr-pythontools
 vi /etc/frr/daemons
 systemctl restart frr
 
+vtysh
+
 lxd init
 # create network = no
 # default network = br-menhera
@@ -39,5 +41,4 @@ lxc config show moyo-server
 lxc config set moyo-server security.privileged true
 lxc config set moyo-server security.nesting true
 lxc start moyo-server
-vtysh
 ```
